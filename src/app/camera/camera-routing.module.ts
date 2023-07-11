@@ -7,7 +7,7 @@ const routes: Routes = [
 {
   path:'camera' , component:Camera1Component
 }
-];
+]; 
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],

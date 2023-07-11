@@ -1,8 +1,9 @@
-
-<div class="page-wrapper chiller-theme" [ngClass]="{ 'toggled': isSidebarToggled }">
-  
+<div
+  class="page-wrapper chiller-theme"
+  [ngClass]="{ toggled: isSidebarToggled }"
+>
   <a id="show-sidebar" class="btn btn-sm btn-dark" (click)="toggleSidebar()">
-    <img src="assets/icons/bars.svg" alt="">
+    <img src="assets/icons/bars.svg" alt="" />
   </a>
 
   <nav id="sidebar" class="sidebar-wrapper">
@@ -10,11 +11,10 @@
       <div class="sidebar-brand">
         <a href="#">Yolo App</a>
         <div id="close-sidebar" (click)="closeSidebar()">
-           <img src="assets/icons/bars.svg" alt="">
+          <img src="assets/icons/bars.svg" alt="" />
         </div>
       </div>
- 
- 
+
       <!-- sidebar-search  -->
       <div class="sidebar-menu">
         <ul>
@@ -22,80 +22,46 @@
             <span>General</span>
           </li>
           <li>
-            <a  routerLink="/dashboard" routerLinkActive="active">
+            <a routerLink="/dashboard" routerLinkActive="active">
               <i class="fa fa-address-card" aria-hidden="true"></i>
               <span>Dashboard</span>
             </a>
- 
           </li>
 
           <li class="header-menu">
-            <span>Faces</span>
+            <span>Streaming</span>
           </li>
           <li>
-            <a  routerLink="/camera">
-      
+            <a routerLink="/camera">
               <i class="fa fa-video-camera" aria-hidden="true"></i>
-              <span>Camera 1</span>
+              <span>Camera</span>
             </a>
           </li>
 
-          <li class="header-menu">
-            <span>Objects</span>
-          </li>
-          <li >
-            <a href="#">
-              <i class="fa fa-video-camera" aria-hidden="true"></i>
-              <span>Camera 2</span>
-            </a>
-          </li>
-          <li >
-            <a href="#">
-              <i class="fa fa-video-camera" aria-hidden="true"></i>
-              <span>Camera 3</span>
-            </a>
- 
-          </li>
-
-          <li>
-            <a  style="display: flex;
-            justify-content: space-between;" class="dropdown-btn" (click)="toggleDropdown()">
-              <span>Maps</span>
-              <i class="fa fa-caret-down"></i>
-            </a>
-            <div class="dropdown-container" [ngClass]="{'dropdown-container': true, 'active': isDropdownActive}" [ngStyle]="{'height': isDropdownActive ? 'auto' : '0'}">
-              <ul>
-                <li>
-                  <a href="#">Google maps</a>
-                </li>
-                <li>
-                  <a href="#">Open street map</a>
-                </li>
-              </ul>
-            </div>
-          </li>
-
-          
           <li class="header-menu">
             <span>Admistration</span>
           </li>
+
           <li>
-            <a routerLink="/staff" routerLinkActive="active">
-              <i class="fa fa-users" aria-hidden="true"></i>
-              <span>Staff</span>
-              <!-- <span class="badge badge-pill badge-primary">Beta</span> -->
+            <a routerLink="/configure" routerLinkActive="active">
+              <!-- <i class="fa fa-users" aria-hidden="true"></i> -->
+              <i class="fa fa-gear" aria-hidden="true"></i>
+              <span>Configure</span>
             </a>
           </li>
- 
- 
+
+          <li>
+            <a routerLink="/history" routerLinkActive="active">
+              <i class="fa fa-clock-o" aria-hidden="true"></i>
+              <span>History</span>
+            </a>
+          </li>
         </ul>
       </div>
       <!-- sidebar-menu  -->
     </div>
     <!-- sidebar-content  -->
- 
   </nav>
- 
 
   <!-- sidebar-wrapper  -->
   <main class="page-content">
@@ -103,5 +69,4 @@
       <router-outlet></router-outlet>
     </div>
   </main>
- </div>
- 
+</div>

@@ -8,14 +8,16 @@ import { RouterModule, RouterLinkActive } from '@angular/router';
 import { SharedModule } from './shared/shared.module';
 import { SocketIoModule, SocketIoConfig } from 'ngx-socket-io';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HttpClientModule } from '@angular/common/http';
+
 
 const config: SocketIoConfig = { url: 'http://127.0.0.1:5000', options: {} };
 
 @NgModule({
-  declarations: [
+  declarations: [ 
     AppComponent,
     AdminLayoutComponent,
-    AdminLayoutComponent
+    AdminLayoutComponent,
   ],
   imports: [
     BrowserModule,
@@ -25,6 +27,7 @@ const config: SocketIoConfig = { url: 'http://127.0.0.1:5000', options: {} };
     SharedModule,
     SocketIoModule.forRoot(config),
     BrowserAnimationsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

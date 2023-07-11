@@ -2,18 +2,28 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { PagesRoutingModule } from './pages-routing.module';
-import { StaffComponent } from './staff/staff.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { HighchartsChartModule } from 'highcharts-angular';
+import { ConfigrationComponent } from './configration/configration.component';
+import { HistoryComponent } from './history/history.component';
+import { HttpClientModule } from '@angular/common/http';
+import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 @NgModule({
   declarations: [
-    StaffComponent,
-    DashboardComponent
+    DashboardComponent,
+    ConfigrationComponent,
+    HistoryComponent
   ],
   imports: [
     CommonModule,
-    PagesRoutingModule
+    PagesRoutingModule,
+    HighchartsChartModule,
+    HttpClientModule,
+     
+     // MatSlideToggleModule
   ]
 })
 export class PagesModule { }
