@@ -11,7 +11,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
 
 
-const config: SocketIoConfig = { url: 'http://127.0.0.1:5000', options: {} };
+const config: SocketIoConfig = { url: 'https://1456-59-103-102-9.ngrok-free.app', options: {} };
 
 @NgModule({
   declarations: [ 
