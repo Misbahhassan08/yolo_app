@@ -1,0 +1,54 @@
+<div class="container-fluid">
+  <div>
+    <h3>History</h3>
+  </div>
+
+  <div class="row mt-5" *ngFor="let historyItem of filteredHistory">
+    <h4>{{ historyItem.title }}</h4>
+    <div class="col-md-4 mt-3" *ngFor="let data of historyItem.data">
+      <div class="card">
+        <div class="card-body">
+          <div class="row">
+            <div class="col-md-9">
+              <h5 class="card-title">{{ data.date }}</h5>
+            </div>
+            <div class="col-md-3">
+              <button type="button" class="btn" (click)="expandCard(data)">
+                <i class="fa fa-expand" aria-hidden="true"></i>
+              </button>
+            </div>
+          </div>
+          <div class="row mt-2">
+            <div class="col-md-7">
+              <img style="height: 120px" class="card-img" [src]="data.photo" />
+            </div>
+            <div class="col-md-5 align-self-center">
+              <p class="card-text"><b>Type:</b> {{ historyItem.title }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Full screen card -->
+    <div class="fullscreen-card" *ngIf="expandedCard">
+      <div class="card">
+        <div class="card-body">
+          <!-- Content of the expanded card -->
+          <h5 class="card-title">{{ expandedCard.date }}</h5>
+          <img
+            style="height: 300px"
+            class="card-img"
+            [src]="expandedCard.photo"
+          />
+          <p class="card-text"><b>Type:</b> {{ historyItem.title }}</p>
+
+          <!-- Close button -->
+          <button type="button" class="btn" (click)="closeCard()">
+            <i class="fa fa-times" aria-hidden="true"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

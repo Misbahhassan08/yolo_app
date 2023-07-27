@@ -1,12 +1,14 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { StaffComponent } from './staff/staff.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { ConfigrationComponent } from './configration/configration.component';
+import { HistoryComponent } from './history/history.component';
 
 const routes: Routes = [
-  {path:'', redirectTo:'staff', pathMatch:'full'},
-  {path:'staff', component:StaffComponent},
+  {path:'', redirectTo:'/login', pathMatch:'full'},
   {path:'dashboard', component:DashboardComponent},
+  {path:'configure', component:ConfigrationComponent},
+  {path:'history', component:HistoryComponent},
 ];
 
 @NgModule({
